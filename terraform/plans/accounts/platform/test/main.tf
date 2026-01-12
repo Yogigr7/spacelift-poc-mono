@@ -57,7 +57,7 @@ resource "random_integer" "test_bucket" {
 
 resource "aws_s3_bucket" "test_bucket" {
 
-  bucket = "test-bucket-yogi-spacelift-mono${random_integer.test_bucket.result}"
+  bucket = "test-bucket-yogi-spacelift-mono-test${random_integer.test_bucket.result}"
 
   tags = merge(module.tagging.value, {
     PermissionsBoundary = "JuniorCPE_PermissionsBoundary"
